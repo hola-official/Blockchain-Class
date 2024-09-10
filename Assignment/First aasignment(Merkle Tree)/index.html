@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airdrop Eligibility Checker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/merkletreejs@latest/merkletree.js"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800"
+    >
+      <div class="w-full max-w-md p-8 rounded-xl bg-gray-800 shadow-2xl h-full">
+        <h1 class="text-3xl font-bold mb-6 text-center text-white">
+          Airdrop Eligibility Checker
+        </h1>
+        <div class="space-y-4">
+          <input
+            type="text"
+            id="addressInput"
+            placeholder="Enter your address"
+            class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
+          />
+          <button
+            id="checkButton"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Check Eligibility
+          </button>
+        </div>
+        <div id="result" class="mt-6 p-4 rounded-lg text-center hidden">
+          <p class="text-white font-semibold"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
