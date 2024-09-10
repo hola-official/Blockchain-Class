@@ -44,7 +44,7 @@ function initializeMerkleTree() {
     root = tree.getRoot().toString("hex");
     // console.log("Merkle root:", root);
 
-    console.log("Merkle Tree initialized:", tree.toString());
+    // console.log("Merkle Tree initialized:", tree.toString());
   } catch (error) {
     console.error("Error initializing Merkle tree:", error);
   }
@@ -96,20 +96,16 @@ function checkEligibility() {
   );
 }
 
-// Initialize the Merkle tree when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded");
   initializeMerkleTree();
 
   // Add event listener to the button
   const checkButton = document.getElementById("checkButton");
   if (checkButton) {
-    console.log("Adding click event listener to button");
     checkButton.addEventListener("click", checkEligibility);
   } else {
     console.error("Check button not found");
   }
 });
 
-// Log when the script has finished loading
-console.log("Script loaded");
+
